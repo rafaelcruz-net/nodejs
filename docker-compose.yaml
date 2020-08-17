@@ -2,7 +2,7 @@ version: '3.1'
 services:
   mongo:
     image: mongo
-    restart: always
+    restart: "no"
     environment:
       MONGO_INITDB_ROOT_USERNAME: rafaelcruz
       MONGO_INITDB_ROOT_PASSWORD: 123456#A
@@ -14,7 +14,7 @@ services:
         - mongo_network
   mongo-express:
     image: mongo-express
-    restart: always
+    restart: "no"
     ports:
       - 8081:8081
     environment:
